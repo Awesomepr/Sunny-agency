@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap');
+
+:root {
+    --Soft-red: hsl(7, 99%, 70%);
+    --Yellow: hsl(51, 100%, 49%);
+    --Dark-desaturated-cyan: hsl(167, 40%, 24%);
+    --Dark-blue : hsl(198, 62%, 26%);
+    --Dark-moderate-cyan : hsl(168, 34%, 41%);
+    --Very-dark-desaturated-blue: hsl(212, 27%, 19%);
+    --Very-dark-grayish-blue: hsl(213, 9%, 39%);
+    --Dark-grayish-blue: hsl(232, 10%, 55%);
+    --Grayish-blue: hsl(210, 4%, 67%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    font-family: 'Barlow',sans-serif;
+    /* overflow-x: hidden; */
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Fraunces',sans-serif;
+}
+header {
+    height: 80vh;
+    background: url(images/desktop/image-header.jpg) center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: var(--White);
+}
+.header-text {
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+.header-text h1 {
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+}
+header nav.desktop {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+    height: 15%;
+}
+header nav.mobile {
+    display: none;
+}
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+header nav ul li {
+    margin: 20px;
+}
+a {
+    text-decoration: none;
+    color: var(--White);
+}
+a.button {
+    background: var(--White);
+    color: var(--Dark-grayish-blue);
+    padding: 8px 25px;
+    padding-bottom: 10px;
+    border-radius: 50px;
+}
+.disc-container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.disc-container .text {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 70px;
+}
+.disc-container .image-container {
+    max-width: 50vw;
+}
+.disc-container .image-container img {
+    height: 100%;
+    width: 100%;
+}
+p {
+    margin: 30px 0;
+    font-weight: 100;
+    line-height: 1.35;
+}
+.disc-container .text a  {
+    text-transform: uppercase;
+    color: #000;
+}
+.services {
+    height: 60vh;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.services .content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 50px;
+    text-align: center;
+    background: url(images/desktop/image-photography.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.services .content-container:first-child {
+    background: url(images/desktop/image-graphic-design.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.content-container p {
+    margin: 15px;
+}
+.content-container p {
+    max-width: 80%;
+}
+.testimonials {
+    height: 80vh;
+    text-align: center;
+    padding: 50px;
+} 
+.feetback-container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    height: 80%;
+
+}
+.feetback-container .feedback {
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 80%;
+    padding: 80px 20px;
+}
+.feedback footer {
+    display: flex;
+    flex-direction: column;
+}
+.feedback footer span {
+    margin: 3px;
+}
+.feedback footer span:nth-child(2){
+    font-size: 0.8rem;
+    color: var(--Grayish-blue);
+}
+.feedback img {
+    height: 50px;
+    border-radius: 50px;
+}
+.gallary {
+    display: grid;
+    height: 30vh;
+    grid-template-columns: repeat(4,1fr);
+    max-width: 100%;
+    overflow: hidden;
+    height: 50vh;
+}
+.gallary div {
+    width: calc(100vw/4);
+    height: 50vh;
+}
+.gallary div img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+footer.footer {
+    min-height: 30vh;
+    background: var(--Dark-moderate-cyan);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.links {
+    list-style: none;
+    display: flex;
+    margin: 5px;
+    margin-bottom: 20px;
+}
+.links li {
+    margin: 5px 20px;
+}
+.social-icons {
+    display: flex;
+}
+.social-icons img {
+    margin: 10px;
+}
+.mobile {
+    display: none;
+}
+@media  screen and (max-width:375px) {
+    header {
+        height: 80vh;
+        background: url(images/mobile/image-header.jpg) center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: var(--White);
+    }
+    .header-text {
+        text-align: center;
+        font-size: 1rem;
+    }
+    .header-text h1 {
+        font-size: 2rem;
+    }
+    section.main-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        overflow-x: hidden;
+    }
+    section.main-content .disc-container {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100vw;
+        padding: 10px;
+    }
+    section.main-content .image-container {
+        width: 100vw;
+        background: #000;
+    }
+    section.main-content .text {
+        padding: 10px;
+        text-align: center;
+    }
+    section.main-content .disc-container img {
+        height: 50vh;
+        width: 100%;
+    }
+    header nav.mobile {
+        display: block;
+        padding: 20px;
+    }
+    header nav.desktop {
+        display: none;
+    }
+    header nav.mobile ul {
+        display: none;
+    }
+    .feetback-container  {
+        grid-template-columns: 1fr;
+        /* height: 120vh; */
+    }
+    .feetback-container .feedback {
+        margin-bottom: 0px;
+        padding: 50px 10px;
+    }
+    .testimonials {
+        height: 170vh;
+        width: 100%;
+        padding: 50px 10px;
+    }
+    .testimonials h3 {
+        padding: 30px 0;
+    }
+    .gallary {
+        grid-template-columns: repeat(2,1fr);
+        height: 50vh;
+        width: 100vw;
+    }
+    .gallary div {
+        height: calc(50vh/2);
+        width: calc(100vw/2);
+        background: green;
+    }
+    .services {
+        height: calc(2*80vh);
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2,1fr);
+    }
+    .services .content-container.content-container:first-child {
+        background-image: url(images/mobile/image-graphic-design.jpg);
+        background-size: cover;
+        background-position: center;
+        padding: 50px 5px;
+    }
+    .services .content-container:nth-child(2) {
+        background: url(images/mobile/image-photography.jpg);
+        background-size: cover;
+        background-position: center;
+        padding: 50px 5px;
+    }
+} 
